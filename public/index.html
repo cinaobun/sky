@@ -9,21 +9,21 @@
 
 <body>
 
-  <!-- pinned clock -->
+  <!-- clock -->
   <div class="clock-pin">
     <span class="clock"><span class="dot"></span>LIVE <span id="time">12:00:00 PM</span></span>
   </div>
 
   <div class="page">
 
-    <!-- left wallpaper panel -->
+    <!-- panel -->
     <div class="backdrop">
       <div class="backdrop-contents">
         <div class="wallpaper"></div>
       </div>
     </div>
 
-    <!-- main column -->
+    <!-- main -->
     <div class="page-layout">
       <div class="page-content">
 
@@ -78,7 +78,7 @@
   </div>
 
 <script>
-  // LIVE clock: 12-hour, no padded hour, padded minutes and seconds
+  // LIVE clock
   (function () {
     var el = document.getElementById("time");
     var fmt = new Intl.DateTimeFormat("en-US", {
@@ -89,14 +89,14 @@
     setInterval(tick, 1000);
   })();
 
-  // Marquee: clone the text twice so the loop is seamless
+  // Marquee:
   (function () {
     var track = document.querySelector(".marquee-track");
     var span = track.firstElementChild;
     for (var i = 0; i < 2; i++) track.appendChild(span.cloneNode(true));
   })();
 
-  // fit-text: scale the h1 so it fills the column width on one line
+  // fit-text
   (function () {
     var h1 = document.querySelector("h1");
     var box = h1.parentElement;
