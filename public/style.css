@@ -246,3 +246,10 @@ nav.links {
   margin-left: 600px;
   position: absolute;
 }
+
+.why {
+  position: absolute;
+  width: 520px;
+  height: 140px;
+  margin-top: 250px;
+}
