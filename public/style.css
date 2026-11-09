@@ -219,6 +219,7 @@ h1 i { color: var(--blue); }
 .welcome {
   margin-top: 1rem;
   max-width: 300px; /* usefull for text */
+  margin-left: 1rem;
 }
 
 nav.links {
@@ -233,15 +234,17 @@ nav.links {
 .intro { display: flex; gap: 1rem; align-items: flex-start; }
 
 .dontyou {
-  max-width: 200px;
+  position: absolute;
+  width: 200px;
+  height: 140px;
   padding-right: 3rem;
-  margin-top: 2rem;
+  margin-top: 270px;
   margin-left: 390px;
 }
 
 .why {
   position: absolute;
-  width: 520px;
+  width: 360px;
   height: 140px;
-  margin-top: 250px;
+  margin-top: 270px;
 }
