@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sky's mesmerizing website</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- pinned clock -->
+  <div class="clock-pin">
+    <span class="clock"><span class="dot"></span>LIVE <span id="time">12:00:00 PM</span></span>
+  </div>
+
+  <div class="page">
+
+    <!-- left wallpaper panel -->
+    <div class="backdrop">
+      <div class="backdrop-contents">
+        <div class="wallpaper"></div>
+      </div>
+    </div>
+
+    <!-- main column -->
+    <div class="page-layout">
+      <div class="page-content">
+
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <span class="marquee-text">  ★  sky's mesmerizing website  ★  WELCOME ꩜ .ᐟ  ★ . ^^ ^ 0 ★  ₍ᐢ. .₎  ★  \  ★  |  ★  |  ★  /  ★    skyline's mesmerizing website  ★  WELCOME ꩜ .ᐟ  ★  enjoy your stay ^^ ★  ₍ᐢ. .₎  ★    ★★★   </span>
+          </div>
+        </div>
+
+        <hr>
+        <br>
+
+        <div class="title">
+          <h1>sky's <i>mesmerizing</i> website <i>!</i></h1>
+        </div>
+
+        
+        <br>
+        <div class="links">
+          
+        </div>
+        
+        <hr>
+        
+        <div class="marquee marquee-still" aria-hidden="true">
+            <span class="marquee-text-still"> - - - - - - - - - - - - - - - - ★  the sky's most mesmerizing website  ★  enjoy while you can .ᐟ ^^ ★ . ^ - - - - - - - - - - - - - - - - </span>
+        </div>
+        
+        <br>
+
+        <div class="intro">
+        <p class="avatar"><img src="src/avatar.jpg" alt="avatar"></p>
+        <p class="welcome">+｡ﾟ. :･ﾟ₊✩༉ ₊˚ ｡ welcome 2 my portfolio site! feel free to click around &amp; take a look at some of my work—i’ll be adding some more soon! ｡ ˚₊ ✩༉₊ ･ﾟ: .｡ﾟ+</p>
+        </div>        
+
+        <nav class="links" aria-label="socials">
+        
+          <a class="link-card" href="https://x.com/cinaobun/" target="_blank" rel="noopener noreferrer" aria-label="Twitter (aka X)">twitter ↗</a>
+          <a class="link-card" href="https://www.instagram.com/cinaobun/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">instagram ↗</a>
+          <a class="link-card" href="https://discord.com/users/1481822534054707382" target="_blank" rel="noopener noreferrer" aria-label="Discord">discord ↗</a>
+          <a class="link-card" href="https://www.pinterest.com/cinaobun/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">pinterest ↗</a>
+          <a class="link-card" href="https://www.tiktok.com/@cinnaobun" target="_blank" rel="noopener noreferrer" aria-label="TikTok">tiktok ↗</a>
+          <a class="link-card" href="https://github.com/cinaobun/" target="_blank" rel="noopener noreferrer" aria-label="Github">github ↗</a>
+          <a class="link-card" href="https://steamcommunity.com/id/cinaobun/" target="_blank" rel="noopener noreferrer" aria-label="Steam">steam ↗</a>
+          <a class="link-card" href="https://www.roblox.com/users/976460168/profile" target="_blank" rel="noopener noreferrer" aria-label="Roblox">roblox ↗</a>
+
+          <img class="dontyou" src="src/dontyou.jpg" alt="dont you">
+        </nav>  
+      </div>
+    </div>
+
+  </div>
+
+<script>
+  // LIVE clock: 12-hour, no padded hour, padded minutes and seconds
+  (function () {
+    var el = document.getElementById("time");
+    var fmt = new Intl.DateTimeFormat("en-US", {
+      hour: "numeric", minute: "2-digit", second: "2-digit", hour12: true
+    });
+    function tick() { el.textContent = fmt.format(new Date()); }
+    tick();
+    setInterval(tick, 1000);
+  })();
+
+  // Marquee: clone the text twice so the loop is seamless
+  (function () {
+    var track = document.querySelector(".marquee-track");
+    var span = track.firstElementChild;
+    for (var i = 0; i < 2; i++) track.appendChild(span.cloneNode(true));
+  })();
+
+  // fit-text: scale the h1 so it fills the column width on one line
+  (function () {
+    var h1 = document.querySelector("h1");
+    var box = h1.parentElement;
+    function fit() {
+      h1.style.fontSize = "100px";
+      var w = h1.getBoundingClientRect().width;
+      if (w > 0) h1.style.fontSize = (100 * box.clientWidth / w * 0.995) + "px";
+    }
+    fit();
+    window.addEventListener("resize", fit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  })();
+</script>
+
+</body>
+</html>
