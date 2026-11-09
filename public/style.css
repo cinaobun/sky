@@ -70,7 +70,7 @@ hr {
   background: rgba(0, 0, 0, 0.6);
 }
 
-/* ---------- LIVE clock (pinned top-left) ---------- */
+/* ---------- LIVE clock ---------- */
 .clock-pin {
   position: fixed;
   top: 0;
@@ -102,7 +102,7 @@ hr {
 
 @keyframes blink { 50% { opacity: 0; } }
 
-/* ---------- Page: wallpaper panel + content ---------- */
+/* ---------- panel n content ---------- */
 .page {
   display: flex;
   flex-direction: row;
@@ -110,7 +110,7 @@ hr {
   min-height: 100vh;
 }
 
-/* left panel, 20% wide */
+/* left panel */
 .backdrop {
   position: relative;
   flex: 0 0 20%;
@@ -181,7 +181,6 @@ makes text stay still when hovering w mouse cursor*/
   
 }
 
-/* JS adds two clones, so one third of the track is one loop */
 @keyframes marquee-scroll {
   to { transform: translateX(-33.3333%); }
 }
@@ -219,7 +218,7 @@ h1 i { color: var(--blue); }
 
 .welcome {
   margin-top: 1rem;
-  max-width: 300px; /* adjust until it wraps to 5 lines    |    usefull for text */
+  max-width: 300px; /* usefull for text */
 }
 
 nav.links {
@@ -228,7 +227,7 @@ nav.links {
   align-items: flex-start;
   gap: 0.4rem;
   text-align: left;
-  margin: 0.5rem 0 0 1rem; /* 1rem matches the avatar's left edge */
+  margin: 0.5rem 0 0 1rem;
 }
 
 .intro { display: flex; gap: 1rem; align-items: flex-start; }
@@ -237,4 +236,13 @@ nav.links {
   max-width: 200px;
   padding-right: 3rem;
   margin-top: 2rem;
+  margin-left: 390px;
+}
+
+.vr {
+  width: 1px;
+  height: 690px;
+  margin: 12px;
+  margin-left: 600px;
+  position: absolute;
 }
